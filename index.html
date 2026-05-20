@@ -1,131 +1,205 @@
-<!DOCTYPE html> 
+<!-- index.html -->
+
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
+    <!-- META TAGS -->
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TÍTULO -->
     <title>TerraFertil</title>
 
+    <!-- ÍCONE -->
     <link rel="icon" href="/assets/IMG/terrafertil2.ico">
 
+    <!-- FONTE -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="CSS/global.css">
+
+    <!-- CSS INDEX -->
+    <link rel="stylesheet" href="CSS/index.css">
+
 </head>
 
 <body>
 
-    <!-- TOPO -->
-    <div class="topo">
-        <span>TerraFertil</span>
+    <!-- ==================================================
+         HERO
+    =================================================== -->
 
-    <!-- MENU -->
-    <div class="menu">
-    <a href="sobre.html">Sobre nós</a>
+    <section class="hero">
 
-    <a href="contato.html">Contato</a>
-    </div>
+        <!-- ==================================================
+             TOPO
+        =================================================== -->
 
-    </div>
+        <div class="topo">
 
-    <!-- LOGO -->
-    <div class="logo-titulo">
+            <!-- MENU -->
+            <nav class="menu">
 
-        <img src="/assets/IMG/logo-terrafertil.png" width="225" height="125">
+                <a href="sobre.html">Sobre Nós</a>
 
-        <div class="logo">
-            <h1>TerraFertil</h1>
+                <a href="contato.html">Contato</a>
+
+            </nav>
+
         </div>
 
-    </div>
+        <!-- ==================================================
+             LOGO
+        =================================================== -->
 
-<!-- CARROSSEL -->
-<div class="carrossel">
+        <div class="logo-titulo">
 
-    <!-- TEXTO SOBRE O SLIDE -->
-    <div class="texto-slide">
+            <img src="/assets/IMG/logo-terrafertil.png" alt="Logo TerraFertil">
 
-        <h2>Bem-vindo à TerraFertil </h2>
+            <div class="logo">
 
-        <p>
-            Agricultura, clima e tecnologia para um cultivo melhor.
-        </p>
+                <h1>TerraFertil</h1>
 
-    </div>
+            </div>
 
-    <div class="slides">
+        </div>
 
-        <img src="/assets/IMG/campo-de-cerejeira-700.jpeg">
+        <!-- ==================================================
+             CARROSSEL
+        =================================================== -->
 
-        <img src="/assets/IMG/campo-de-roa-700.jpeg">
+        <div class="carrossel">
 
-    </div>
+            <!-- TEXTO DO SLIDE -->
+            <div class="texto-slide">
 
-</div>
+                <h2>Bem-vindo à TerraFertil 🌱</h2>
 
-    <!-- CONTEÚDO -->
-    <div class="conteudo">
+                <p>
+                    Agricultura, clima e tecnologia para um cultivo melhor.
+                </p>
 
-        <!-- AGRICULTURA -->
-        <h2>O que é Agricultura?</h2>
+            </div>
 
-        <img src="/assets/IMG/texeira-fotos1.jpeg.jpg" class="img-post">
+            <!-- SLIDES -->
+            <div class="slides">
 
-        <p>
-            A agricultura é a prática de cultivar a terra para produzir alimentos,
-            libras, energia e matérias-primas. 
-            Essencial para a sobrevivência e o desenvolvimento da sociedade,
-            ela transforma recursos naturais em produtos 
-            vitais para o consumo humano e para o abastecimento de indústrias
-        </p>
+                <img src="/assets/IMG/campo-de-cerejeira-700.jpeg" alt="Campo agrícola">
 
-        <!-- CLIMA -->
-        <h2>Importância do Clima 
-        &#9728;
-        </h2>
+                <img src="/assets/IMG/campo-de-roa-700.jpeg" alt="Plantação">
 
-        <img src="/assets/IMG/teixeira-fotos2.jpeg.jpg" class="img-post">
+            </div>
 
-        <p>
-            O clima influencia diretamente no crescimento das plantações,
-            na qualidade dos alimentos e na produtividade agrícola.
-        </p>
+        </div>
 
-        <!-- BRASIL -->
-        <h2>Agricultura no Brasil 
-        &#128668;
-        </h2>
+    </section>
 
-        <p>
-            O Brasil é um dos maiores produtores agrícolas do mundo,
-            sendo destaque na produção de soja, milho, café e cana-de-açúcar.
-        </p>
+    <!-- ==================================================
+         CONTEÚDO
+    =================================================== -->
 
-        <!-- DICAS -->
-        <h2>Dicas para iniciantes 
-        &#127807;
-        </h2>
+    <main class="conteudo">
 
-        <ul>
-            <li>Utilize sementes de qualidade</li>
-            <li>Regue as plantas regularmente</li>
-            <li>Escolha um solo fértil</li>
-            <li>Evite excesso de água</li>
-        </ul>
+        <!-- ==================================================
+             AGRICULTURA
+        =================================================== -->
 
-        <!-- CURIOSIDADE -->
-        <h2>Curiosidade 
-        &#127758;
-        </h2>
+        <section class="box-conteudo">
 
-        <p>
-            A agricultura é uma das atividades mais antigas do mundo e
-            continua sendo essencial para a alimentação da população.
-        </p>
+            <h2>O que é Agricultura?</h2>
 
-</div>
+            <img src="/assets/IMG/texeira-fotos1.jpeg.jpg"
+                 class="img-post"
+                 alt="Agricultura">
 
-    </div>
+            <p>
+                A agricultura é a prática de cultivar a terra para produzir
+                alimentos, fibras, energia e matérias-primas.
+            </p>
 
-    <!-- RODAPÉ -->
+        </section>
+
+        <!-- ==================================================
+             CLIMA
+        =================================================== -->
+
+        <section class="box-conteudo">
+
+            <h2>Importância do Clima ☀</h2>
+
+            <img src="/assets/IMG/teixeira-fotos2.jpeg.jpg"
+                 class="img-post"
+                 alt="Clima">
+
+            <p>
+                O clima influencia diretamente no crescimento das plantações,
+                na qualidade dos alimentos e na produtividade agrícola.
+            </p>
+
+        </section>
+
+        <!-- ==================================================
+             AGRICULTURA NO BRASIL
+        =================================================== -->
+
+        <section class="box-conteudo">
+
+            <h2>Agricultura no Brasil 🚜</h2>
+
+            <p>
+                O Brasil é um dos maiores produtores agrícolas do mundo,
+                sendo destaque na produção de soja, milho, café e cana-de-açúcar.
+            </p>
+
+        </section>
+
+        <!-- ==================================================
+             DICAS
+        =================================================== -->
+
+        <section class="box-conteudo">
+
+            <h2>Dicas para iniciantes 🌿</h2>
+
+            <ul>
+
+                <li>Utilize sementes de qualidade</li>
+
+                <li>Regue as plantas regularmente</li>
+
+                <li>Escolha um solo fértil</li>
+
+                <li>Evite excesso de água</li>
+
+            </ul>
+
+        </section>
+
+        <!-- ==================================================
+             CURIOSIDADE
+        =================================================== -->
+
+        <section class="box-conteudo">
+
+            <h2>Curiosidade 🌎</h2>
+
+            <p>
+                A agricultura é uma das atividades mais antigas do mundo e
+                continua sendo essencial para a alimentação da população.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- ==================================================
+         RODAPÉ
+    =================================================== -->
+
     <footer class="rodape">
 
         <p>
@@ -135,4 +209,5 @@
     </footer>
 
 </body>
+
 </html>

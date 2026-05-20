@@ -1,0 +1,377 @@
+/* ==================================================
+   INDEX.CSS
+   Página Inicial - TerraFertil
+================================================== */
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   TOPO SOBRE O SLIDE
+================================================== */
+
+.topo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.menu a {
+    background-color: rgba(36, 61, 36, 0.85);
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(60, 110, 60);
+
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   LOGO SOBRE O SLIDE
+================================================== */
+
+.logo-titulo {
+    position: absolute;
+
+    top: 90px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    text-align: center;
+
+    color: white;
+}
+
+.logo-titulo img {
+    width: 230px;
+    margin-top: 40px;
+    max-width: 100%;
+
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 42px;
+
+    color: white;
+
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ==================================================
+   CARROSSEL
+================================================== */
+
+.carrossel {
+    width: 100%;
+    height: 80vh;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   SLIDES
+================================================== */
+
+.slides {
+    display: flex;
+
+    width: 200%;
+    height: 100%;
+
+    animation: slide 8s infinite;
+}
+
+.slides img {
+    width: 50%;
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   TEXTO DO SLIDE
+================================================== */
+
+.texto-slide {
+    position: absolute;
+
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 100;
+
+    text-align: center;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    padding: 25px 40px;
+
+    border-radius: 20px;
+
+    width: 90%;
+    max-width: 750px;
+}
+
+.texto-slide h2 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.texto-slide p {
+    font-size: 22px;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+
+.box-conteudo {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.box-conteudo h2 {
+    margin-bottom: 20px;
+
+    color: rgb(36, 61, 36);
+}
+
+.box-conteudo p {
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   IMAGENS DOS POSTS
+================================================== */
+
+.img-post {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==================================================
+   LISTA
+================================================== */
+
+.box-conteudo ul {
+    padding-left: 20px;
+}
+
+.box-conteudo li {
+    margin-bottom: 10px;
+}
+
+
+/* ==================================================
+   ANIMAÇÃO DOS SLIDES
+================================================== */
+
+@keyframes slide {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    45% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    95% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+
+/* ===== TABLET ===== */
+
+@media (max-width: 992px) {
+
+    .logo h1 {
+        font-size: 34px;
+    }
+
+    .texto-slide h2 {
+        font-size: 36px;
+    }
+
+    .texto-slide p {
+        font-size: 18px;
+    }
+}
+
+
+/* ===== CELULAR ===== */
+
+@media (max-width: 768px) {
+
+    .hero,
+    .carrossel,
+    .slides img {
+        height: 100vh;
+    }
+
+    .logo-titulo {
+        top: 110px;
+    }
+
+    .logo-titulo img {
+        width: 180px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        width: 90%;
+        text-align: center;
+    }
+
+    .texto-slide {
+        padding: 20px;
+    }
+
+    .texto-slide h2 {
+        font-size: 28px;
+    }
+
+    .texto-slide p {
+        font-size: 16px;
+    }
+
+    .img-post {
+        height: 220px;
+    }
+
+    .box-conteudo {
+        padding: 20px;
+    }
+}
+
+
+/* ===== CELULAR PEQUENO ===== */
+
+@media (max-width: 480px) {
+
+    .logo-titulo img {
+        width: 150px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .texto-slide h2 {
+        font-size: 22px;
+    }
+
+    .texto-slide p {
+        font-size: 14px;
+    }
+
+    .img-post {
+        height: 180px;
+    }
+}

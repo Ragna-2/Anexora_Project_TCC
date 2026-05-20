@@ -1,0 +1,129 @@
+/* ==================================================
+   GLOBAL.CSS
+   Estilos base do site TerraFertil
+================================================== */
+
+
+/* RESET BÁSICO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(240, 240, 240);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* LINKS GLOBAIS */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==================================================
+   TOPO (HEADER GERAL)
+================================================== */
+
+.topo {
+    width: 100%;
+}
+
+
+/* ==================================================
+   MENU (USADO EM TODAS AS PÁGINAS)
+================================================== */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    padding: 15px;
+}
+
+.menu a {
+    background-color: rgb(36, 61, 36);
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(60, 110, 60);
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   CONTEÚDO PADRÃO
+================================================== */
+
+.conteudo {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+.rodape {
+    background-color: rgb(51, 94, 51);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE GLOBAL
+================================================== */
+
+@media (max-width: 768px) {
+
+    .conteudo {
+        width: 95%;
+        padding: 25px 0;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        width: 90%;
+        text-align: center;
+    }
+}

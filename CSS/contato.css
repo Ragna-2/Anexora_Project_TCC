@@ -1,0 +1,180 @@
+/* ==================================================
+   CONTATO.CSS
+================================================== */
+
+
+/* ==================================================
+   BANNER CONTATO
+================================================== */
+
+.banner-contato {
+    position: relative;
+
+    width: 100%;
+    height: 60vh;
+
+    background-image: url('/assets/IMG/campo-de-roa-700.jpeg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==================================================
+   OVERLAY
+================================================== */
+
+.overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==================================================
+   TEXTO DO BANNER
+================================================== */
+
+.banner-conteudo {
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    color: white;
+}
+
+.banner-conteudo h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.banner-conteudo p {
+    font-size: 20px;
+}
+
+
+/* ==================================================
+   FORMULÁRIO
+================================================== */
+
+.caixa-contato {
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    margin-top: -60px;
+
+    position: relative;
+
+    z-index: 10;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.caixa-contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-contato label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+.caixa-contato input,
+.caixa-contato textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.caixa-contato textarea {
+    resize: none;
+    height: 150px;
+}
+
+
+/* ==================================================
+   BOTÃO
+================================================== */
+
+.caixa-contato button {
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: rgb(87, 146, 87);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.caixa-contato button:hover {
+    background-color: rgb(60, 110, 60);
+
+    transform: scale(1.02);
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .banner-conteudo h1 {
+        font-size: 32px;
+    }
+
+    .banner-conteudo p {
+        font-size: 16px;
+    }
+
+    .caixa-contato {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .banner-contato {
+        height: 50vh;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 24px;
+    }
+
+    .caixa-contato {
+        padding: 20px;
+    }
+}
