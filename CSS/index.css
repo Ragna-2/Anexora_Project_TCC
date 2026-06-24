@@ -14,8 +14,9 @@ body{
     height: 100vh;
     box-sizing: border-box;
     overflow-x: hidden;
-    background: linear-gradient(, red, orange);
+    background: linear-gradient;
 }
+
 .hero {
     height: 100vh;
     overflow: hidden;
