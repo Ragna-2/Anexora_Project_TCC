@@ -2,13 +2,14 @@
     padding: 0;
     margin: 0;
     border: 0;
-    border-radius: 0;
+    border-radius: 0 ;
     text-decoration: none;
     outline: none;
     box-sizing: border-box;
 }
 
-/* ================= HERO ================= */
+
+
 body{
     width: 100%;
     height: 100vh;
@@ -16,6 +17,9 @@ body{
     overflow-x: hidden;
     background: linear-gradient;
 }
+
+
+/* ================= HERO ================= */
 
 .hero {
     height: 100vh;
@@ -151,6 +155,7 @@ body{
 
 
 /* ================= CONTEÚDO ================= */
+
 .conteudo{
     position: absolute;
     top: 80%;
@@ -193,7 +198,7 @@ body{
 }
 
 .box-conteudo li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -210,6 +215,7 @@ body{
 
 /* ================= RESPONSIVO ================= */
 
+
 @media (max-width: 992px) {
     .logo h1 { font-size: 34px; }
     .texto-slide h2 { font-size: 36px; }
@@ -219,13 +225,9 @@ body{
 @media (max-width: 768px) {
 
     .logo-titulo { top: 110px; }
-
     .logo-titulo img { width: 180px; }
-
     .logo h1 { font-size: 28px; }
-
     .menu { flex-direction: column; }
-
     .menu a {
         width: 90%;
         text-align: center;
@@ -237,19 +239,21 @@ body{
 
     .texto-slide h2 { font-size: 28px; }
     .texto-slide p { font-size: 16px; }
-
     .img-post { height: 220px; }
 }
 
 @media (max-width: 480px) {
-
     .logo-titulo img { width: 150px; }
-
     .logo h1 { font-size: 22px; }
-
     .texto-slide h2 { font-size: 22px; }
-
     .texto-slide p { font-size: 14px; }
-
     .img-post { height: 180px; }
 }
+
+rodape {
+    background-color: rgb(51, 94, 51);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+} 
