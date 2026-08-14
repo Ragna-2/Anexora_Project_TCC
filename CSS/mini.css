@@ -1,43 +1,88 @@
-*{
-    padding: 0;
+.min {
+    background: white;
+    padding: 40px;          
+    border-radius: 20px;
+    margin: 40px auto;    
+    max-width: 900px;      
+    width: 90%;            
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.min h1 {
+    color: #2e7d32;         
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.topico-min {
+    margin-bottom: 35px;    
+}
+
+.topico-min h2, 
+.topico-min h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0; 
+    padding-bottom: 5px;
+}
+
+.min ul {
+    list-style: none;     
     margin: 0;
-    border: 0;
-    border-radius: 0;
-    text-decoration: none;
-    outline: none;
-    box-sizing: border-box;
 }
 
-/* ================= HERO ================= */
-body{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background: linear-gradient;
-}
-
-.hero {
-    height: 100vh;
-    overflow: hidden;
+.min li {
+    font-size: 1.05rem;
+    color: #555;          
+    line-height: 1.6;      
+    margin-bottom: 12px;   
     position: relative;
+    padding-left: 25px;    
 }
 
-/* ================= TOPO ================= */
-
-.topo {
-    position: fixed;
-    top: 0;
+.min li::before {
+    content: "✓";           
+    color: #2e7d32;
+    font-weight: bold;
+    position: absolute;
     left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
+    top: 0;
 }
 
-.topo img{
-    width: 120px;
-    height: auto;
-    max-width: 100%;
+.banner-min {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-image: url('/assets/IMG/toma-toes.jpeg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;            
+}
+
+.conteudo-min {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.rodape {
+    background-color: rgb(51, 94, 51);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
 }
