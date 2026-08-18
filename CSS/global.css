@@ -1,73 +1,86 @@
-/* ==================================================
-   GLOBAL.CSS
-   Estilos base do site TerraFertil
-================================================== */
-
-
-/* RESET BÁSICO */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: 0;
 }
 
-
-/* BODY */
-
+/* CONFIGURAÇÃO DO CORPO */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: rgb(240, 240, 240);
     color: #333;
     line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-
 /* LINKS GLOBAIS */
-
 a {
-    text-decoration: none;
     color: inherit;
 }
 
-
 /* ==================================================
-   TOPO (HEADER GERAL)
+   TOPO & NAVEGAÇÃO FIXA (Para todas as páginas)
 ================================================== */
-
 .topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.topo img {
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-
 /* ==================================================
-   MENU (USADO EM TODAS AS PÁGINAS)
+   ESTRUTURA DO MENU (Desktop)
 ================================================== */
+#menu-check {
+    display: none; /* Esconde o checkbox */
+}
+
+.menu-botao {
+    display: none; /* Esconde o ícone hambúrguer no computador */
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 110;
+}
 
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 15px;
-
-    flex-wrap: wrap;
-
-    padding: 15px;
 }
 
 .menu a {
     background-color: rgb(36, 61, 36);
-
     color: white;
-
     padding: 12px 25px;
-
     border-radius: 30px;
-
     font-weight: bold;
-
     transition: 0.3s;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .menu a:hover {
@@ -75,55 +88,100 @@ a {
     transform: scale(1.05);
 }
 
-
 /* ==================================================
-   CONTEÚDO PADRÃO
+   CONTEÚDO PADRÃO CENTRALIZADO
 ================================================== */
-
 .conteudo {
     width: 90%;
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 40px 0;
+    max-width: 1000px;
+    margin: 50px auto; /* Centraliza automaticamente sem quebrar */
 }
 
-
 /* ==================================================
-   RODAPÉ
+   RODAPÉ GLOBAL
 ================================================== */
-
 .rodape {
     background-color: rgb(51, 94, 51);
-
     color: white;
-
     text-align: center;
-
-    padding: 20px;
-
-    margin-top: 1500px;
+    padding: 30px 20px;
+    margin-top: 50px;
 }
 
+.rodape a {
+    color: white;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.rodape a:hover {
+    color: #a3cca3;
+}
+
+.rodape p {
+    margin-top: 10px;
+    font-size: 14px;
+}
 
 /* ==================================================
-   RESPONSIVIDADE GLOBAL
+   RESPONSIVIDADE E MENU DESLIZANTE GLOBAIS
 ================================================== */
 
-@media (max-width: 768px) {
+/* Telas médias (ajuste fino para o menu não quebrar) */
+@media (max-width: 1024px) {
+    .menu {
+        gap: 8px;
+    }
+    .menu a {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
 
+/* Telas de Celulares e Tablets (Ativa Menu Deslizante) */
+@media (max-width: 868px) {
     .conteudo {
         width: 95%;
-        padding: 25px 0;
     }
 
+    /* Mostra o botão de três barras */
+    .menu-botao {
+        display: block;
+    }
+
+    /* Transforma o menu em uma cortina lateral direita escondida */
     .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Totalmente fora da tela */
+        width: 280px;
+        height: 100vh;
+        background-color: rgba(20, 35, 20, 0.98);
+        backdrop-filter: blur(10px);
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        transition: 0.4s ease-in-out; /* Efeito deslizante suave */
+        z-index: 105;
+        padding: 40px;
     }
 
     .menu a {
-        width: 90%;
+        width: 100%;
         text-align: center;
+        font-size: 16px;
+        padding: 12px;
     }
+
+    /* Quando clicar no botão hambúrguer, o menu desliza para dentro */
+    #menu-check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .topo { padding: 15px; }
+    .topo img { width: 100px; }
 }

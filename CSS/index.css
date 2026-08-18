@@ -1,88 +1,72 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-    border-radius: 0 ;
-    text-decoration: none;
-    outline: none;
-    box-sizing: border-box;
-}
-
-
-
-body{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background: linear-gradient;
-}
-
-
-/* ================= HERO ================= */
-
 .hero {
-    height: 100vh;
+    height: 700px; /* Alinha exatamente com a altura definida para as imagens */
+    width: 100%;
     overflow: hidden;
     position: relative;
+    margin-top: 0; /* Garante que fique colado no topo da tela */
 }
 
-/* ================= TOPO ================= */
 
-.topo {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* ================= CARROSSEL & SLIDES (Tamanho) ================= */
+.carrossel {
     width: 100%;
-    z-index: 100;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.topo img{
-    width: 120px;
-    height: auto;
-    max-width: 100%;
-}
-/* ================= MENU ================= */
-.nav-bar{
+.slides {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    width: 100%; 
+    height: 100%;
+    animation: slide 8s infinite; /* Tempo de 8 segundos */
 }
 
-.menu a {
-    background-color: rgba(36, 61, 36, 0.85);
+.slides img {
+    width: 100%; 
+    height: 700px; /* Altura do código  */
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* ================= TEXTO DO SLIDE ================= */
+.texto-slide {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 80;
+    text-align: center;
     color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    
+    padding: 30px;
+    width: 90%;
+    max-width: 750px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
 }
 
-.menu a:hover {
-    background-color: rgb(60, 110, 60);
-    transform: scale(1.05);
+.texto-slide h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* ================= LOGO ================= */
+.texto-slide p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
 
+/* ================= LOGO CENTRAL ================= */
 .logo-titulo {
     position: absolute;
-    top: 90px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    z-index: 85;
     text-align: center;
     color: white;
 }
@@ -91,7 +75,6 @@ body{
     width: 230px;
     max-width: 100%;
     height: auto;
-    margin-top: 40px;
 }
 
 .logo h1 {
@@ -100,74 +83,13 @@ body{
     text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-/* ================= CARROSSEL ================= */
-
-.carrossel {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* ================= SLIDES ================= */
-
-.slides {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: slide 8s infinite;
-}
-
-.slides img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-}
-
-
-/* ================= TEXTO ================= */
-
-.texto-slide {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    text-align: center;
-    color: white;
-    padding: 25px 40px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 750px;
-}
-
-.texto-slide h2 {
-    font-size: 48px;
-}
-
-.texto-slide p {
-    font-size: 22px;
-    line-height: 1.6;
-}
-
-
-/* ================= CONTEÚDO ================= */
-
-.conteudo{
-    position: absolute;
-    top: 80%;
-    left: 17.5%;
-}
+/* ================= BOXES DE CONTEÚDO ================= */
 .box-conteudo {
-    position: relative;
     background: white;
     padding: 30px;
     border-radius: 20px;
     margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
 }
 
 .box-conteudo h2 {
@@ -179,31 +101,24 @@ body{
     line-height: 1.8;
 }
 
-
-/* ================= IMAGENS ================= */
-
-.img-post {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-
-/* ================= LISTA ================= */
-
 .box-conteudo ul {
     padding-left: 20px;
 }
 
 .box-conteudo li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
+/* ================= IMAGENS DOS POSTS ================= */
+.img-post {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
 
-/* ================= ANIMAÇÃO ================= */
-
+/* ================= ANIMAÇÃO ORIGINAL RESTAURADA ================= */
 @keyframes slide {
     0% { transform: translateX(0); }
     45% { transform: translateX(0); }
@@ -212,48 +127,34 @@ body{
     100% { transform: translateX(0); }
 }
 
-
-/* ================= RESPONSIVO ================= */
-
-
+/* ================= RESPONSIVIDADE ESPECÍFICA DA HOME ================= */
 @media (max-width: 992px) {
     .logo h1 { font-size: 34px; }
-    .texto-slide h2 { font-size: 36px; }
+    .texto-slide h2 { font-size: 38px; }
     .texto-slide p { font-size: 18px; }
 }
 
 @media (max-width: 768px) {
-
-    .logo-titulo { top: 110px; }
+    .logo-titulo { top: 100px; }
     .logo-titulo img { width: 180px; }
     .logo h1 { font-size: 28px; }
-    .menu { flex-direction: column; }
-    .menu a {
-        width: 90%;
-        text-align: center;
-    }
 
     .texto-slide {
+        top: 60%;
         padding: 20px;
     }
-
-    .texto-slide h2 { font-size: 28px; }
+    .texto-slide h2 { font-size: 30px; }
     .texto-slide p { font-size: 16px; }
-    .img-post { height: 220px; }
+    
+    .img-post { height: 260px; }
 }
 
 @media (max-width: 480px) {
-    .logo-titulo img { width: 150px; }
+    .logo-titulo img { width: 140px; }
     .logo h1 { font-size: 22px; }
-    .texto-slide h2 { font-size: 22px; }
+    
+    .texto-slide h2 { font-size: 24px; }
     .texto-slide p { font-size: 14px; }
-    .img-post { height: 180px; }
+    
+    .img-post { height: 200px; }
 }
-
-rodape {
-    background-color: rgb(51, 94, 51);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 100px;
-} 
