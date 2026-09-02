@@ -6,7 +6,6 @@
     outline: none;
     border: 0;
 }
- 
 /* CONFIGURAÇÃO DO CORPO */
 body {
     font-family: 'Poppins', sans-serif;
@@ -17,12 +16,10 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
- 
 /* LINKS GLOBAIS */
 a {
     color: inherit;
 }
- 
 /* ==================================================
    TOPO & NAVEGAÇÃO FIXA (Para todas as páginas)
 ================================================== */
@@ -36,27 +33,23 @@ a {
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
 }
- 
 .topo img {
     width: 120px;
     height: auto;
     max-width: 100%;
 }
- 
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
- 
 /* ==================================================
    ESTRUTURA DO MENU (Desktop)
 ================================================== */
 #menu-check {
     display: none; /* Esconde o checkbox */
 }
- 
 .menu-botao {
     display: none; /* Esconde o ícone hambúrguer no computador */
     color: white;
@@ -64,7 +57,6 @@ a {
     cursor: pointer;
     z-index: 110;
 }
- 
 .menu {
     display: flex;
     justify-content: center;
@@ -87,7 +79,6 @@ a {
     background-color: rgb(60, 110, 60);
     transform: scale(1.05);
 }
- 
 /* ==================================================
    CONTEÚDO PADRÃO CENTRALIZADO
 ================================================== */
@@ -96,7 +87,6 @@ a {
     max-width: 1000px;
     margin: 50px auto; /* Centraliza automaticamente sem quebrar */
 }
- 
 /* ==================================================
    RODAPÉ GLOBAL
 ================================================== */
@@ -107,26 +97,25 @@ a {
     padding: 30px 20px;
     margin-top: 50px;
 }
- 
 .rodape a {
     color: white;
     font-size: 28px;
     transition: 0.3s;
 }
- 
+
 .rodape a:hover {
     color: #a3cca3;
 }
- 
+
 .rodape p {
     margin-top: 10px;
     font-size: 14px;
 }
- 
+
 /* ==================================================
    RESPONSIVIDADE E MENU DESLIZANTE GLOBAIS
 ================================================== */
- 
+
 /* Telas médias (ajuste fino para o menu não quebrar) */
 @media (max-width: 1024px) {
     .menu {
@@ -137,18 +126,15 @@ a {
         font-size: 13px;
     }
 }
- 
 /* Telas de Celulares e Tablets (Ativa Menu Deslizante) */
 @media (max-width: 868px) {
     .conteudo {
         width: 95%;
     }
- 
     /* Mostra o botão de três barras */
     .menu-botao {
         display: block;
     }
- 
     /* Transforma o menu em uma cortina lateral direita escondida */
     .menu {
         position: fixed;
@@ -173,16 +159,13 @@ a {
         font-size: 16px;
         padding: 12px;
     }
- 
     /* Quando clicar no botão hambúrguer, o menu desliza para dentro */
     #menu-check:checked ~ .menu {
         right: 0;
     }
 }
- 
 /* Ajustes para telas muito pequenas */
 @media (max-width: 480px) {
     .topo { padding: 15px; }
     .topo img { width: 100px; }
 }
- 
