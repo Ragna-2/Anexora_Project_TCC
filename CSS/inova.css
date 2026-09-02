@@ -21,7 +21,7 @@
 
 .topico-sus h2, 
 .topico-sus h3 {
-    color: #333;
+    color: #2e7d32;
     font-size: 1.5rem;
     margin-bottom: 15px;
     border-bottom: 2px solid #e0e0e0; 
@@ -44,7 +44,7 @@
 
 /* Ícone de check personalizado para inovação */
 .sus li::before {
-    content: "✓";           
+    content: "";           
     color: #1b5e20;
     font-weight: bold;
     position: absolute;
