@@ -43,7 +43,7 @@
 }
  
 .sus li::before {
-    content: ">";          
+    content: "✓";          
     color: #2e7d32;
     font-weight: bold;
     position: absolute;
