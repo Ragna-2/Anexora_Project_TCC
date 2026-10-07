@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TerraFertil</title>
     <link rel="icon" href="/assets/IMG/terrafertil2.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="./style.css">
-    
 </head>
 <body>
 
     <!--HERO-->
     <section class="hero">
 
-        <!--TOPO-->
+        <!--TOPO COM MENU HAMBÚRGUER-->
         <div class="topo">
-           
-            <!-- MENU -->
             <div class="nav-bar">
+                <!-- Logo -->
                 <img src="./assets/IMG/logo-terrafertil.png" alt="Logo TerraFertil">
+
+                <!-- Checkbox invisível que controla a abertura do menu -->
+                <input type="checkbox" id="menu-check">
+                
+                <!-- Ícone do menu hambúrguer -->
+                <label for="menu-check" class="menu-botao">
+                    <i class='bx bx-menu'></i>
+                </label>
+
+                <!-- Menu de navegação -->
                 <nav class="menu">
-                    
                     <a href="./index.html">Inicio</a>
                     <a href="./pages/sobre.html">Sobre Nós</a>
                     <a href="./pages/contato.html">Contato</a>
                     <a href="./pages/agricultura.html">Agricultura Sustentável</a>
-
                 </nav>
             </div>
-
         </div>
 
-        <!--LOGO-->
+        <!--LOGO CENTRAL-->
         <div class="logo-titulo">
            
         </div>
@@ -45,22 +49,14 @@
 
             <!--TEXTO DO SLIDE -->
             <div class="texto-slide">
-
                 <h2>Bem-vindo ao TerraFertil</h2>
-
-                <p>
-                    Cultivando o futuro com responsabilidade.
-                </p>
-
+                <p>Cultivando o futuro com responsabilidade.</p>
             </div>
 
             <!-- SLIDES -->
             <div class="slides">
-
                 <img src="/assets/IMG/campo-do-alto-full.jpeg" alt="Campo agrícola">
-                <img src="/assets/IMG/arvore fudida.jpg" alt="Arvore fudida">
-                
-
+                <img src="/assets/IMG/arvore fudida.jpg" alt="Arvore">
             </div>
 
         </div>
@@ -72,108 +68,76 @@
 
         <!--AGRICULTURA-->
         <section class="box-conteudo">
-
             <h2>Agricultura ou Agronomia? Qual a diferença?</h2>
-
-            <img src="/assets/IMG/plantinha.jpg.jpg"
-                 class="img-post"
-                 alt="Agricultura">
-
+            <img src="/assets/IMG/plantinha.jpg.jpg" class="img-post" alt="Agricultura">
             <p>
                 A agricultura é a prática de mexer na terra para plantar a semente e colher o alimento.
                 A agronomia é a ciência que estuda a planta e o solo para ensinar o melhor jeito de produzir.
                 Em resumo, a agricultura planta e a agronomia ajuda a plantar melhor.
             </p>
-
         </section>
 
         <!--CLIMA-->
         <section class="box-conteudo">
-
             <h2>Importância do Clima </h2>
-
-            <img src="/assets/IMG/folha_agua.jpg"
-                 class="img-post"
-                 alt="Clima">
-
+            <img src="/assets/IMG/folha_agua.jpg" class="img-post" alt="Clima">
             <p>
                 A agricultura depende de forma direta do clima, que define o sucesso das safras,
                  a oferta de comida no mundo e os preços dos alimentos. Chuvas na medida certa, temperaturas estáveis 
-                e boa luz do sol garantem o crescimento das plantas. Mudanças no tempo causam perdas e risco de fom
+                e boa luz do sol garantem o crescimento das plantas. Mudanças no tempo causam perdas e risco de fome.
             </p>
-
         </section>
 
         <!--AGRICULTURA NO BRASIL-->
         <section class="box-conteudo">
-
             <h2>Agricultura no Brasil </h2>
-
             <img src="/assets/IMG/trator_foda.jpg" class="img-post" alt="trator em campo">
-
             <p>
                 A agricultura brasileira é reconhecida como altamente competitiva e geradora de empregos,
                  de riqueza, de alimentos, de fibras e de bioenergia para o Brasil e para outros países. 
                  É um dos setores que mais contribui para o crescimento do PIB nacional e que responde por 21% da soma de todas as riquezas produzidas, 
-                 um quinto de todos os empregos e 43,2% das exportações brasileiras, chegando a US$ 96,7 bilhões em 2019 (Vendas..., 2020). 
-                 Foi um dos poucos segmentos da economia brasileira que apresentou crescimento positivo. Internamente,
-                 o setor contribuiu para manter em declínio o preço real da cesta básica de alimentos.
+                 um quinto de todos os empregos e 43,2% das exportações brasileiras.
             </p>
-
         </section>
 
         <section class="box-conteudo">
-
             <img src="/assets/IMG/hortela.jpg" class="img-post" alt="planta de hortelã">
-
             <p>
                 O Brasil é um dos maiores produtores agrícolas do mundo,
                 sendo destaque na produção de soja, milho, café e cana-de-açúcar.
             </p>
-
         </section>
 
         <!--DICAS -->
         <section class="box-conteudo">
-
             <h2>Dicas para iniciantes </h2>
-
             <ul>
-
                 <li>Utilize sementes de qualidade</li>
                 <li>Regue as plantas regularmente</li>
                 <li>Escolha um solo fértil</li>
                 <li>Evite excesso de água</li>
-
             </ul>
-
         </section>
 
         <!--CURIOSIDADE-->
         <section class="box-conteudo">
-
             <h2>Fatos Surpreendentes no Mundo</h2>
-
             <p>
-                <h3>origem da agricultura</h3>A agricultura surgiu há cerca de 11.500 a 12.000 anos,
+                <h3>Origem da agricultura</h3>A agricultura surgiu há cerca de 11.500 a 12.000 anos,
                 no final da última era glacial, durante o período Neolítico.
-                Ela apareceu de forma independente em ao menos onze regiões do mundo, como no Oriente Médio (região do Crescente Fértil),
-                na bacia dos rios Tigre, Eufrates e Nilo, na Ásia e nas Américas, marcando a transição do nomadismo para a vida sedentária
             </p>
             <p>
-                <h3>Agricultura espacial</h3>Pesquisas de ponta conduzidas por órgãos como a Embrapa já mostraram que tubérculos como a
-                mandioca e a batata-doce possuem potencial para cultivo em solo simulado de Marte
+                <h3>Agricultura espacial</h3>Pesquisas de órgãos como a Embrapa mostraram que tubérculos como a
+                mandioca e a batata-doce possuem potencial para cultivo em solo simulado de Marte.
             </p>
             <p>
                <h3>Origem da palavra</h3>A palavra agricultura vem do latim ager (campo) + cultura (cultivo), significando literalmente 
-               "a arte de cultivar o campo" 
+                "a arte de cultivar o campo".
             </p>
-
             <p>
-               <h3>Diversidade de plantas</h3>Das centenas de milhares de plantas existentes na Terra, a humanidade baseia a sua alimentação
+                <h3>Diversidade de plantas</h3>Das centenas de milhares de plantas existentes na Terra, a humanidade baseia a sua alimentação
                 em menos de 200 espécies agrícolas principais.
             </p>
-
         </section>
 
     </main>
@@ -185,5 +149,6 @@
         </a>
         <p>© 2026 TerraFertil - Todos os direitos reservados</p>
     </footer>
+
 </body>
 </html>

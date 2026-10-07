@@ -6,6 +6,7 @@
     outline: none;
     border: 0;
 }
+
 /* CONFIGURAÇÃO DO CORPO */
 body {
     font-family: 'Poppins', sans-serif;
@@ -16,12 +17,14 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 /* LINKS GLOBAIS */
 a {
     color: inherit;
 }
+
 /* ==================================================
-   TOPO & NAVEGAÇÃO FIXA (Para todas as páginas)
+   TOPO & NAVEGAÇÃO FIXA
 ================================================== */
 .topo {
     position: fixed;
@@ -30,33 +33,38 @@ a {
     width: 100%;
     z-index: 100;
     padding: 15px 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
+    background-color: rgb(20, 35, 20); /* Fundo sólido padrão */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+
 .topo img {
     width: 120px;
     height: auto;
     max-width: 100%;
 }
+
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
+
 /* ==================================================
    ESTRUTURA DO MENU (Desktop)
 ================================================== */
 #menu-check {
-    display: none; /* Esconde o checkbox */
+    display: none; 
 }
+
 .menu-botao {
-    display: none; /* Esconde o ícone hambúrguer no computador */
+    display: none; /* Escondido no PC */
     color: white;
     font-size: 32px;
     cursor: pointer;
     z-index: 110;
 }
+
 .menu {
     display: flex;
     justify-content: center;
@@ -67,7 +75,7 @@ a {
 .menu a {
     background-color: rgb(36, 61, 36);
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
     transition: 0.3s;
@@ -79,14 +87,16 @@ a {
     background-color: rgb(60, 110, 60);
     transform: scale(1.05);
 }
+
 /* ==================================================
    CONTEÚDO PADRÃO CENTRALIZADO
 ================================================== */
 .conteudo {
     width: 90%;
     max-width: 1000px;
-    margin: 50px auto; /* Centraliza automaticamente sem quebrar */
+    margin: 110px auto 50px auto;
 }
+
 /* ==================================================
    RODAPÉ GLOBAL
 ================================================== */
@@ -97,6 +107,7 @@ a {
     padding: 30px 20px;
     margin-top: 50px;
 }
+
 .rodape a {
     color: white;
     font-size: 28px;
@@ -113,59 +124,38 @@ a {
 }
 
 /* ==================================================
-   RESPONSIVIDADE E MENU DESLIZANTE GLOBAIS
+   RESPONSIVIDADE (Menu Hambúrguer Sólido para Celular)
 ================================================== */
-
-/* Telas médias (ajuste fino para o menu não quebrar) */
-@media (max-width: 1024px) {
-    .menu {
-        gap: 8px;
-    }
-    .menu a {
-        padding: 8px 14px;
-        font-size: 13px;
-    }
-}
-/* Telas de Celulares e Tablets (Ativa Menu Deslizante) */
 @media (max-width: 868px) {
-    .conteudo {
-        width: 95%;
-    }
-    /* Mostra o botão de três barras */
     .menu-botao {
-        display: block;
+        display: block; /* Mostra o botão do hambúrguer no celular */
     }
-    /* Transforma o menu em uma cortina lateral direita escondida */
+    
+    /* Menu fechado por padrão no celular */
     .menu {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Totalmente fora da tela */
-        width: 280px;
-        height: 100vh;
-        background-color: rgba(20, 35, 20, 0.98);
-        backdrop-filter: blur(10px);
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(20, 35, 20); /* Fundo verde 100% sólido, sem transparência */
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 25px;
-        transition: 0.4s ease-in-out; /* Efeito deslizante suave */
-        z-index: 105;
-        padding: 40px;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
     }
  
     .menu a {
-        width: 100%;
+        width: 90%;
         text-align: center;
-        font-size: 16px;
         padding: 12px;
+        background-color: rgb(36, 61, 36);
+        border-radius: 10px;
     }
-    /* Quando clicar no botão hambúrguer, o menu desliza para dentro */
+
+    /* Quando marcar o checkbox, exibe o menu em formato de lista sólida abaixo do topo */
     #menu-check:checked ~ .menu {
-        right: 0;
+        display: flex;
     }
-}
-/* Ajustes para telas muito pequenas */
-@media (max-width: 480px) {
-    .topo { padding: 15px; }
-    .topo img { width: 100px; }
 }

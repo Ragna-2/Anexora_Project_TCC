@@ -2,61 +2,55 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - TerraFertil</title>
     <link rel="icon" href="/assets/IMG/terrafertil2.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' >
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="../CSS/contato.css">
-
 </head>
 
 <body>
 
     <div class="topo">
-           
         <!-- MENU -->
         <div class="nav-bar">
             <img src="../assets/IMG/logo-terrafertil.png" alt="Logo TerraFertil">
+
+            <!-- Checkbox invisível que controla a abertura do menu hambúrguer -->
+            <input type="checkbox" id="menu-check">
+            
+            <!-- Ícone do menu hambúrguer -->
+            <label for="menu-check" class="menu-botao">
+                <i class='bx bx-menu'></i>
+            </label>
+
             <nav class="menu">
-
-            <a href="../index.html">Início</a>
-             <a href="../pages/sobre.html">Sobre Nós</a>
-            <a href="../pages/contato.html">Contato</a>
-            <a href="../pages/agricultura.html">Agricultura Sustentável </a>
-
+                <a href="../index.html">Início</a>
+                <a href="../pages/sobre.html">Sobre Nós</a>
+                <a href="../pages/contato.html">Contato</a>
+                <a href="../pages/agricultura.html">Agricultura Sustentável</a>
             </nav>
         </div>
-
     </div>
 
     <!-- BANNER -->
     <section class="banner-contato">
-
         <div class="overlay"></div>
-
         <div class="banner-conteudo">
-
             <h1>Contato</h1>
-
             <p>
                 Entre em contato com a equipe TerraFertil
             </p>
-
         </div>
-
     </section>
 
     <!-- CONTEÚDO -->
     <main class="conteudo">
-
         <div class="caixa-contato">
-
             <form>
-
                 <label>Nome</label>
                 <input type="text" placeholder="Digite seu nome">
 
@@ -69,19 +63,19 @@
                 <button type="submit">
                     Enviar Mensagem
                 </button>
-
             </form>
-
         </div>
-
     </main>
 
     <!-- RODAPÉ -->
     <footer class="rodape">
-        <a href="https://www.instagram.com/terrafertil_projetotcc/"> <i class='bx bxl-instagram'></i></a>
+        <a href="https://www.instagram.com/terrafertil_projetotcc/" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-instagram'></i>
+        </a>
         <p>
             © 2026 TerraFertil - Todos os direitos reservados
         </p>
     </footer>
+
 </body>
 </html>
