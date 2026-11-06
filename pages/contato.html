@@ -53,16 +53,17 @@
         <div class="caixa-contato">
             <form>
                 <label>Nome</label>
-                <input type="text" placeholder="Digite seu nome">
+                <input type="text" placeholder="Digite seu nome" required id="usuario">  
 
                 <label>Email</label>
-                <input type="email" placeholder="Digite seu email">
+                <input type="email" placeholder="Digite seu email" required id="email">
 
                 <label>Mensagem</label>
-                <textarea placeholder="Digite sua mensagem"></textarea>
+                <textarea placeholder="Digite sua mensagem" required id="mensagem"></textarea>
 
-                <button type="submit">
+                <button type="submit" onclick="clicando()">
                     Enviar Mensagem
+
                 </button>
             </form>
         </div>
@@ -77,6 +78,21 @@
             © 2026 TerraFertil - Todos os direitos reservados
         </p>
     </footer>
+
+
+    <script>
+        function clicando() {
+            const usuario = document.getElementById('usuario')
+            const email = document.getElementById('email')
+            const mensagem = document.getElementById('mensagem')
+
+    
+              if ( required = usuario.value && email.value && mensagem.value) {
+                alert ('Mensagem Enviada!')
+            }
+        }
+        
+    </script>
 
 </body>
 </html>
